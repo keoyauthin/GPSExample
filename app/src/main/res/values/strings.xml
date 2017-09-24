@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">GPSExample</string>
+  <string name="title_activity_maps">Map</string>
+  <string name="btnGMaps">Google Maps</string>
+</resources>
