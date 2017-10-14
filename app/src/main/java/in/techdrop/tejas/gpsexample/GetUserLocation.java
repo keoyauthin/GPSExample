@@ -176,16 +176,25 @@ public class GetUserLocation extends FragmentActivity implements OnMapReadyCallb
       }
       else
       {
-        locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 0, 0, locationListener);
-
         Location lastKnownLocation = locationManager.getLastKnownLocation(locationManager.GPS_PROVIDER);
-        LatLng UserLocation = new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
 
-        mMap.clear();
-        mMap.addMarker(new MarkerOptions().position(UserLocation).title("Your Location"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(UserLocation));
+        if (lastKnownLocation != null) {
+          Log.e("TAG", "GPS is on");
+          LatLng UserLocation = new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
+          Toast.makeText(GetUserLocation.this, "latitude:" + lastKnownLocation.getLatitude() + " longitude:" + lastKnownLocation.getLongitude(), Toast.LENGTH_SHORT).show();
+
+          mMap.clear();
+          mMap.addMarker(new MarkerOptions().position(UserLocation).title("Your Location"));
+          mMap.moveCamera(CameraUpdateFactory.newLatLng(UserLocation));
+        }
+        else
+        {
+          //This is what you need:
+          locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 0, 0, locationListener);
+        }
       }
     }
+
 
     //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
