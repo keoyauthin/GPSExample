@@ -8,24 +8,37 @@
   tools:context="in.techdrop.tejas.gpsexample.MainActivity">
 
   <Button
-    android:id="@+id/btnGmap"
-    android:layout_width="368dp"
-    android:layout_height="wrap_content"
-    android:onClick="btnMaps"
-    android:text="@string/btnGMaps"
-    tools:ignore="MissingConstraints"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="2dp" />
+      android:id="@+id/btnGmap"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="btnMaps"
+      android:text="@string/btnGMaps"
+      tools:ignore="MissingConstraints"
+      tools:layout_editor_absoluteX="8dp"
+      tools:layout_editor_absoluteY="2dp" />
 
   <Button
-    android:id="@+id/btnGetUserLocation"
-    android:layout_width="368dp"
-    android:layout_height="wrap_content"
-    android:elevation="2dp"
-    android:onClick="getUserLocation"
-    android:text="Get Users Location"
-    tools:ignore="HardcodedText,MissingConstraints"
-    tools:layout_editor_absoluteX="8dp"
-    tools:layout_editor_absoluteY="64dp" />
+      android:id="@+id/btnGetUserLocation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:elevation="2dp"
+      android:onClick="getUserLocation"
+      android:text="Get Users Location"
+      tools:ignore="HardcodedText,MissingConstraints"
+      tools:layout_editor_absoluteX="8dp"
+      tools:layout_editor_absoluteY="64dp" />
+
+  <Button
+      android:id="@+id/btnNearBy"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="getNearByLocation"
+      android:text="NEAR BY" />
+
+  <Button
+      android:id="@+id/btnGetLocation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="GET LOCATION API" />
 
 </LinearLayout>

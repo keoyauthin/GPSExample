@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
     startActivity(i);
   }
 
+  void getNearByLocation(View v)
+  {
+    Intent i = new Intent(getApplicationContext(),NearByLocation.class);
+    startActivity(i);
+  }
 }
